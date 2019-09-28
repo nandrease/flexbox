@@ -15,6 +15,6 @@ gulp.task('watch', async function() {
 });
 
 gulp.task('default', (done) => {
-	gulp.series('watch');
+	gulp.series('styles');
 	done();
 });

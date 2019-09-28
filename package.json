@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "gulp styles",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
+  "homepage": "https://nandrease.github.io/flexbox-menu",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.0"
+  },
+  "dependencies": {
+    "gh-pages": "^2.1.1"
   }
 }
