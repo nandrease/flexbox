@@ -48,7 +48,7 @@ a:hover {
 	flex: 1 1 100%;
 }
 .flex-nav .social {
-	flex: 1;
+	flex: 1 0 30px;
 }
 
 .toggleNav {
