@@ -6,12 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "gulp",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "start": "browser-sync start --server --files \"*.css, *.html, *.js\""
   },
   "author": "",
   "homepage": "https://nandrease.github.io/flexbox-menu",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.0"
   },
