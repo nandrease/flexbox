@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+    <!-- .container>.box.box${Box $}*10 -->
+    <div class="wrapper">
+        <nav class="flex-nav">
+            <!-- a:link.toggleNav -->
+            <a href="#" class="toggleNav"  onclick="myFunction(this)">
+                <div class="toggleButton">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div> 
+                <span>Menu Toggle</span>
+            </a>
+            <!-- ul>(li>a{Item 0$})*6 -->
+            <ul>
+                <li><a href="#" title="item-01">Item 01</a></li>
+                <li><a href="#" title="item-02">Item 02</a></li>
+                <li><a href="#" title="item-03">Item 03</a></li>
+                <li><a href="#" title="item-04">Item 04</a></li>
+                <li><a href="#" title="item-05">Item 05</a></li>
+                <li><a href="#" title="item-06">Item 06</a></li>
+                <li class="social"><a href="https://twitter.com/wesbos"><i class="fa fa-twitter"></i></a></li>
+                <li class="social"><a href="https://facebook.com/wesbos"><i class="fa fa-facebook"></i></a></li>
+                <li class="social"><a href="https://instagram.com/wesbos"><i class="fa fa-instagram"></i></a></li>
+                <li class="social"><a href="https://github.com/wesbos"><i class="fa fa-github"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+    <script>
+    function myFunction(x) {
+        x.parentElement.classList.toggle("open");
+    }
+    </script>
+</body>
+</html>
