@@ -1,20 +1,24 @@
-const gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
+const { src, dest, watch, series, parallel } = require('gulp');
 
-gulp.task('styles', () => {
-	return gulp
-		.src('style.css')
-		.pipe(
-			autoprefixer()
-		)
-		.pipe(gulp.dest('build'));
-});
+function styles() {
+	return src('style.css').pipe(autoprefixer()).pipe(dest('build'));
+}
 
-gulp.task('watch', async function() {
-	return gulp.watch('*.css', gulp.series('styles'));
-});
+function html() {
+	return src('./index.html').pipe(dest('build'));
+}
 
-gulp.task('default', (done) => {
-	gulp.series('styles');
-	done();
-});
+function watchTask() {
+	return watch('*.css', series('styles'));
+}
+// gulp.task('watch', async function() {
+// 	return gulp.watch('*.css', series('styles'));
+// });
+
+exports.default = series(styles, html);
+// gulp.task('default', (done) => {
+// 	// series('styles');
+// 	gulp.parallel(['copy', 'styles']);
+// 	done();
+// });
